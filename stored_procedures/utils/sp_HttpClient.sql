@@ -1,6 +1,6 @@
 use rickandmorty_api
 
-CREATE OR ALTER PROCEDURE HttpClient @url VARCHAR(MAX), @result VARCHAR(MAX) OUTPUT
+CREATE OR ALTER PROCEDURE sp_HttpClient @url VARCHAR(MAX), @result VARCHAR(MAX) OUTPUT
 AS
 BEGIN
     DECLARE @token INT;
