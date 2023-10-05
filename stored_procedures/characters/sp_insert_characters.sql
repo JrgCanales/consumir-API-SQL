@@ -12,7 +12,7 @@ BEGIN
 	SET @countCharacters = JSON_VALUE(@info, '$.info.count');
 	--PRINT 'Count: ' + CAST(@countLocations AS VARCHAR(MAX));
 
-	WHILE (SELECT COUNT(*) FROM dbo.characters) < (@countCharacters)
+	WHILE (SELECT COUNT(*) FROM dbo.characters) < @countCharacters
 	BEGIN
 		SET @count = @count + 1;
 

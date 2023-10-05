@@ -12,7 +12,7 @@ BEGIN
 	SET @countLocations = JSON_VALUE(@info, '$.info.count');
 	--PRINT 'Count: ' + CAST(@countLocations AS VARCHAR(MAX));
 
-	WHILE (SELECT COUNT(*) FROM dbo.locations) < (@countLocations/10)
+	WHILE (SELECT COUNT(*) FROM dbo.locations) < @countLocations
     BEGIN
 		SET @count = @count + 1;
 
